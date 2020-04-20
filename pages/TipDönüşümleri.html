@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="ödev.css">
+
+   <a href="TipDönüşümleri.html" target=-blank></a>
+</head>
+<body bgcolor="#AAA7C1" style="color:white">
+   <div style="background-color:white; color:black; padding: 10px;">
+<h1>Tip Dönüşümleri</h1>
+<p>Çoğu zaman operatörler ve fonksiyonlar otomatik olarak değeri doğru tipe dönüştürürler. Buna “tip dönüştürme” denir.</p>
+<p>Örneğin alert otomatik olarak verilen tüm değerleri karakter dizisine çevirir ve ekranda gösterir. Matematiksel operatörler ise değerleri sayılara çevirir.</p>
+<p>Tabi bunun yanında doğrudan tipi sizin tarafınızdan değiştirilmesi gereken değişkenler vardır.</p>
+<h1>ToString</h1>
+<p>Bir değeri karakter dizisi olarak kullanmak istiyorsanız ToString’i kullanabilirsiniz.</p>
+<p>Örneğin alert(deger) değeri gösterir. Ayrıca String(deger) de kullanılabilir.</p>
+<li>let value = true; </li>
+  <li>  alert(typeof value); // boolean </li>
+
+  <li>   value = String(value); // Şimdi değer karakter dizisi =  "true" </li>
+ <li>  alert(typeof value); // karakter dizisi</li>
+ <p>Eğer false değeri karakter dizisi dönüştürme işlemine tabi tutarsanız "false", null'u tutarsanız "null" olur.</p>
+ <h1>ToNumber</h1>
+ <p>Sayısal dünüştürme işlemleri matematiksel operasyonlarda otomatik olarak gerçekleşir.</p>
+
+  <p> Örneğin sayı olmayan iki değer / işlemine tutulduğunda:</p>
+  <li>alert( "6" / "2" ); // 3, karakterler sayılara dönüştürülür ve işlem öyle yapılır</li>
+
+  <p>Eğer isterseniz Number(value) fonksiyonu ile değeri sayıya dönüştürebilirsiniz:<p>
+  	<li>let str = "123"; </li>
+     <li>  alert(typeof str); // string </li>
+
+      <li>   let num = Number(str); // sayı olan 123 </li>
+
+     <li>   alert(typeof num); // number</li>
+     <p>Bu şekilde fonksiyon ile değer dönüştürme işlemi genelde karakter dizi olarak aldığımız formlarda kullanılır.</p>
+  <p>    Aslında sayı kullanılmak istenmektedir.</p>
+<p>   Fakat yazı kutusunun içeriğine sayı dahilinde yazılanları kontrol etmeniz gerekmektedir.</p>
+ <p>   Böyle bir fonksiyona sayı olmayan bir değer geldiğinde fonksiyon NaN değeri dönderir. Yani (Not a number) sayı değil.</p>
+ <li>let age = Number("Bir sayı yerine her hangi bir yazı"); </li>
+
+   <li>   alert(age); // NaN, dönüştüremedi!</li>
+ <p>  Sayısal dönüştürme kuralları: </p>
+ <li>undefined	NaN </li>
+   <li>   null	0   </li>
+   <li>    true ve false	1 veya 0 </li>
+     <li>    string	Önce başta ve sondaki whitespace’ler silinir. Sonra eğer kalan değerde hiç bir karakter yok ise sonuç 0. Eğer içerisinde sayısal olmayan bir değer var ise bu durumda NaN değeri alınır.</li>
+     <p>Örnekler:</p>
+     <li>alert( Number("   123   ") ); // 123</li>
+       <li>  alert( Number("123z") );      // NaN (Hata "z" bir rakam değil)</li>
+     <li>  alert( Number(true) );        // 1 </li>
+        <li>  alert( Number(false) );       // 0</li>
+        <p>Lütfen null ve undefined'ın aynı davranmadıklarını bilin. null 0 olurken undefined NaN yani sayı değildir.</p>
+        <h1>ToBoolean</h1>
+        <p>Boolean dönüştürme en kolay olanıdır.</p>
+        <p>Lojik operasyonlarda ( durum testlerinde bu operasyonları işlenecek ) otomatik olarak bu dönüştürme gerçekleşir. Bunun yanında gerekli olduğunda Boolean(value) da kullanılabilir.</p>
+        <p>Dönüştürücü kuralları:</p>
+        <li>“boş” olan 0, veya boş karakter dizisi, null, undefined , Nan gibi değerler false olur.</li>
+        <li>Diğer türlü değerler true olur.</li>
+        <p>Örneğin:</p>
+        <li>alert( Boolean(1) ); // true </li>
+          <li>    alert( Boolean(0) ); // false </li>
+
+           <li>  alert( Boolean("merhaba") ); // true </li>
+         <li>  alert( Boolean("") ); // false</li>
+         <h1>Özet</h1>
+         <p>Üç tane çok kullanılan tip dönüştürücü bulunmaktadır : Karakter Dizisine dönüştüren, sayıya dönüştüren ve boolean değere dönüştüren.</p>
+         <p>ToString – Bir çıktı verildiğinde otomatik olarak bu fonksiyon çalışır. String(value) kullanılarak da dönüştürme işlemi yapılabilir.</p>
+         <p>ToNumber – Matematiksel operasyonlar otomatik olarak yaparlar. Ayrıca Number(value) ile de dönüştürme işlemi yapılabilir.</p>
+         <p>Dönüştürme işlemi aşağıdaki kuralları kapsar:</p>
+         <li> Değer  Sonuç </li>
+         <li>undefined	NaN </li>
+          <li>     null	0    </li>
+           <li>      true / false	1 / 0  </li>
+            <li>   string	Önce başta ve sondaki whitespace’ler silinir. Sonra eğer kalan değerde hiç bir karakter yok ise sonuç 0. Eğer içerisinde sayısal olmayan bir değer var ise bu durumda NaN değeri alınır.</li>
+<p>ToBoolean – Lojik operatörlerde otomatik çalışır ayrıca Boolean(value) ile de dönüştürme işlemi yapılabilir.
+
+Kuralları şu şekildedir:</p>
+<p>Bu kuralların çoğu akılda kalıcıdır. Genelde progamcıların hata yaptıkları yer:</p>
+<li>undefined sayı olarak NaN'dır halbuki null sayı olarak 0 dır.</li>
+<li>"0" bu ve " " bu karakter dizisi boolean olarak ikisi de true olarak dönüşür.</li>

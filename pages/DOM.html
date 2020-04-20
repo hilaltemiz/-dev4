@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		* {
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+}
+html {
+    background-color: #1d4657;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+header {
+    background-color: #4384b1;
+    width: 100%;
+    display: inline-block;
+}
+.menu {
+    float: right;
+}
+.menu li {
+    display: inline-block;
+}
+.menu li a {
+    color: white;
+    font-size: 16px;
+    font-weight: 300;
+    padding: 12px 18px;
+    display: inline-block;
+}
+.menu li a:hover {
+    background-color: #5fabe0;
+}
+.kutu {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+.logo {
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+    padding: 7px 20px;
+    display: inline-block;
+}
+.logo:hover {
+    background-color: #5fabe0;
+}
+main {
+    padding: 30px 15px;
+    min-height: 770px;
+    background-color: white;
+}
+h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+h2 {
+    margin-top: 15px;
+}
+p {
+    margin-top: 15px;
+}
+.foto {
+    float: left;
+    margin: 0px 15px 15px 0;
+    padding: 5px;
+    background: #f7f5ed;
+    border: 1px solid #cccabc;
+    border-radius: 2px;
+    width: calc(100% - 15px);
+    max-width: 400px;
+}
+footer {
+    width: 100%;
+    display: inline-block;
+}
+footer .menu {
+    float: none;
+    text-align: center;
+    margin-top: 10px;
+}
+footer .menu li a {
+    padding: 6px;
+    margin: 6px;
+}
+footer .menu li a:hover {
+    background-color: #1d4657;
+    text-decoration: underline;
+}
+.copyright {
+    font-size: 14px;
+    color: #c5def4;
+    text-align: center;
+    margin: 5px 0;
+}
+.alt-menu {
+    width:10%;
+    position:relative;
+    float:left;
+}
+
+#acilirmenu{
+	  display: none; /* Chech boxumuzu buradan görünmez kılıyoruz. */
+	}
+#menum { display:none; position:absolute; width:100%;	}
+#acilirmenu:checked + #menum { display:block;	}
+
+	</style>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>DOM</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+    <body>
+
+
+        <header>
+            <div class="kutu">
+                <a href="#" class="logo">DOM Yapısı</a>
+                <ul class="menu">
+                    <li class="mevcut">
+                        <a href="#">Anasayfa</a>
+                    </li>
+                    <li>
+                        <a href="#">Portfolyo</a>
+                    </li>
+                    <li>
+                        <a href="#">Hakkımda</a>
+                    </li>
+                    <li>
+                        <a href="#">İletişim</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <main>
+            <div class="kutu">
+                <h1>JavaScript DOM</h1>
+                
+                 	<h2>DOM NEDİR?</h2>
+     	<p>Document Object Model(Doküman Nesne Modeli)'in kısaltması olan DOM dokümanlara erişmek için olan bir W3C standardıdır.
+     	DOM dokümandaki nesnelere erişmek ve içeriğini, stilini, yapısını değiştirmek için kullanılır.</p>
+     	 <h2>Dom Yapsı</h2>
+     	 <p>DOM Yapısını bir ağaç olarak düşünebilirsiniz. En tepede yani kökte HTML etiketi, onun altında ise içerisine yazılmış diğer etiketler bulunur.</p>
+     	 <h2>DOM Programlama Arayüzü</h2>
+     	 <p>JavaScript ile Tüm HTML DOM ağacına ulaşabilirsiniz.
+		DOM içinde tüm HTML etiketleri birer nesne (object) olarak oluşturulmuştur.
+		Programlama arayüzü her etiket için metot(method) ve özellikler(property) sunar.
+		Özellik( Property) etiket değeri üzerinde okuma ve değiştirme yapma imkanı sunar.(İçeriği değiştirme gibi)
+		Methot (Method) etiket üzerinde eylemler gerçekleştirme imkanı sunar.(Yeni etiketler ekleme gibi)</p>
+		<h2>HTML DOM document Nesnesi</h2>
+		<p>document nesnesi web sayfasını temsil eder.
+
+Sayfa içindeki her hangi bir elemente ulaşmak için document nesnesi ile başlamak zorundasınız.  HTML etiketleri üzerinde düzenleme yapmak için kullanılan bazı document metotları aşağıda gösterilmiştir.</p>
+
+<h2>HTML Etiketlerini Seçme</h2>
+<li>document.getElementById(id): id niteliği ile eşleşen ilk kaydı getirir.</li>
+<li>   document.getElementsByName(name): name niteliği ile eşleşen tüm kayıtları dizi olarak  getirir.</li>
+ <li>   document.getElementsByTagName(etiketadı):etiket adı ile eşleşen tüm kayıtları dizi olarak getirir.</li>
+ <li>   document.getElementsByClassName(classAdı):class niteliği ile eşleşen tüm kayıtları dizi olarak getirir.</li>
+  <li>   document.querySelector(seçici): seçici ile eşleşen ilk kaydı getirir.</li>
+  <li>   document.querySelectorAll(seçici): seçici ile eşleşen tüm kayıtları dizi olarak getir. </li>
+<br>
+ <div class="mother">
+    <div class="alt-menu alt-1">
+      <label for="acilirmenu"> <strong>Dinamik element oluşturma</strong> </label>
+      <input type="checkbox" id="acilirmenu"/>
+      <div id="menum">const div = document.createElement("div");
+          console.log(div);</div>
+          
+      </div>
+                  
+               
+        </main>
+        <footer>
+            <div class="kutu">
+                <ul class="menu">
+                    <li class="mevcut">
+                        <a href="#">Anasayfa</a>
+                    </li>
+                    <li>
+                        <a href="#">Portfolyo</a>
+                    </li>
+                    <li>
+                        <a href="#">Hakkımda</a>
+                    </li>
+                    <li>
+                        <a href="#">İletişim</a>
+                    </li>
+                </ul>
+                <p class="copyright">Hilal Temiz © 2020</p>
+            </div>
+        </footer>
+    </body>
+</html>
+
+	<!--
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="ödev.css">
+
+   <a href="Döngüler.html" target=-blank></a>
+</head>
+<body bgcolor="#AAA7C1" style="color:white">
+   <div style="background-color:white; color:black; padding: 10px;">
+   	<h2>DOM NEDİR?</h2>
+   	<p>Document Object Model(Doküman Nesne Modeli)'in kısaltması olan DOM dokümanlara erişmek için olan bir W3C standardıdır.DOM dokümandaki nesnelere erişmek ve içeriğini, stilini, yapısını değiştirmek için kullanı</p>
+ <h2>Dom Yapsı</h2>
+ <p>DOM Yapısını bir ağaç olarak düşünebilirsiniz. En tepede yani kökte HTML etiketi, onun altında ise içerisine yazılmış diğer etiketler bulunur. Örnek olarak sayfa yapısını DOM yönünden inceleyelim.</p>
+ <xmp><html> </xmp>
+ <xmp>     <head> </xmp>
+ <xmp>   <title></title> </xmp>
+ <xmp>   <style></style> </xmp>
+ <xmp>     </head> </xmp>
+  <xmp>    <body> </xmp>
+ <xmp>  <div> </xmp>
+  <xmp>    <p>Biltek Tasarım</p> </xmp>
+ <xmp>  </div> </xmp>
+   <xmp>  </body> </xmp>
+   <xmp>   </html>  </xmp>
+   <p>Yukarıda gördüğünüz HTML yapısı aslında şu şekildedir:</p>
+   <div><img src="transparent_dom.png"></div>
+   <br><br>
+    <div class="mother">
+    <div class="alt-menu alt-1">
+      <label for="acilirmenu">Buraya Tıkla</label><input type="checkbox" id="acilirmenu"/>
+      <div id="menum">Tester</div>
+      </div>
+      -->

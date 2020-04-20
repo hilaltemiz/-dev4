@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="ödev.css">
+
+   <title>JAVASCRİPT</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+ <a href="VeriTipleri.html" target=-blank></a>
+ <body bgcolor="#AAA7C1" style="color:white">
+   <div style="background-color:white; color:black; padding: 10px;">
+ <h1>Veri Türü Nedir?</h1>
+ <p>İnsanlardan farklı olarak bilgisayarlar, 1234 ve abcd arasındaki farkı anlayamazlar. Yani hangisi sayı, hangisi metin bunu ayırt edemezler.
+
+  <p>  Veri türü, değişkenler içinde saklanacak verinin türüne göre sınıflandırılmasıdır. Veri türleri her programla dili için oldukça önemli bir kavramdır. </p>
+
+Bir uygulama geliştirirken değişken içinde saklanan verinin türünü önceden belirtiriz. Böylece bilgisayar verinin saklanacağı bellek alanını buna göre ayırır.</p>
+<p>JavaScript değişkenleri çok farklı veri türlerini tutabilir. JavaScript programlama dilinde başlıca veri türleri sayı (number), metin(string) ve nesne (object) türleridir.</p>
+<h1>Veri Türü Kavramı</h1>
+<p>Veri türü programlamada önemli bir kavramdır. Sadece JavaScript'e özel bir ifade değildir. </p>
+
+  <p> Bir değişken üzerinde işlem yaparken onun veri türünü bilmemiz gerekir. </p>
+ 
+      <p> Veri türleri olmadan aşağıdaki gibi işlemleri bilgisayar çözemez:</p>
+      <li>var sonuc = 20 + "araba";</li>
+      <p>Yukarıdaki işlem mantıklı bir işlem değildir. Matematik derslerinde hocaların dediği gibi elma ile armutu toplayamazsınız. </p>
+
+          <p>   Yukarıdaki işlem hata vermez fakat bir toplama işlemi gerçekleşmez, string birleştirme işlemi gerçekleşir ve sonuç şu şekilde görüntülenir: 20araba .</p>
+
+    <p>  Fakat aşağıdaki işlem, yukarıdaki işleme göre daha farklıdır:</p>
+    <li>var sonuc = "20" + "araba";</li>
+
+    <p>Bunun sebebi 20 sayısı "20" şeklinde tırnak içinde yazıldığında bilgisayar bunu artık string olarak kabul eder. </p>
+
+ <p>  Bir string ile sayının toplanmasının sonucu string değer doğurur:</p>
+ <li>var x = 20 + "araba";</li>
+
+ <p>JavaScript ifadeleri soldan sağa doğru işletir. Farklı işlemler farklı sonuç üretir:</p>
+ <li>var x = 20 + 10 + "araba";</li>
+
+ <h1>JavaScript Türleri Dinamiktir</h1>
+ <p>JavaScript dinamik türlerere sahiptir. Bunun anlamı, Aynı JavaScript değişkeni farklı veri türlerini tutabilir.</p>
+    <li> var x;              // undefined </li>
+      <li>  var x = 10;         // Şuan veri türü sayı </li>
+        <li>  var x = "Ali";      // Şuan veri türü string </li>
+        <p>Aynı değişkeni farklı ifadelerde farklı veri türlerine dönüştürmek mümkündür.</p>
+
+        <h1>JavaScript String (Metin)</h1>
+        <p>Bir string harf, sayı gibi karakter bileşenlerinden oluşan türdür.  Örneğin "Ali Veli", "Numara13", "abc" birer string türdür. </p>
+
+            <p>    JavaScript programlama dilinde string veri türü tırnak içinde yazılır. Bu tırnak çift veya tek olabilir:</p>
+            <li> var websitesi = "uzmanimakademi.net"; </li>
+          <li> var websitesi = 'uzmanimakademi.net'; </li>
+
+          <h1>JavaScript Number (Sayı)</h1>
+          <p>JavaScript programlama dilinde sadece tek tür sayı vardır.
+
+       <p>   Bir değişkene sayılsal değer atanıyorsa bu değer tırnak içinde yazılmaz. </p>
+
+          <p>   Sayılarda ondalık bölüm nokta ile yazılır:</p>
+          <li>var sayi1 = 10; </li>
+   <li>   var sayi2 = 9.99;</li>
+
+   <h1>JavaScript Boolean (Doğru/Yanlış)</h1>
+   <p>Boolean veri türü sadece iki değer alır: true (doğru) ve false (yanlış)</p>
+   <li>var ogrenciMi = true; </li>
+     <li>   var aktifMi = false;</li>
+    <p>Boolean veri türü genelde koşul ifadelerinde kullanılır. </p>
+
+  <p>  Koşul ifadeleri ile ilgili ilerleyen derslerde daha fazla bilgi verilecektir.</p>
+
+  <h1>JavaScript Array (Dizi)</h1>
+  <p>Eğer elinizde birbiriyle ilişkili bir grup veri varsa bu verileri Array adı verilen yapılarda saklarız.</p>
+
+   <p>  JavaScript dizi yapıları köşeli parantez ile oluşturulur. Dizinin elemanları virgül ile ayrılır.</p>
+
+ <p>  Aşağıdaki örnek arabalar adında bir dizi oluşturur. Bu dizi 4 elemana sahiptir.</p>
+ <li>var arabalar = ["Ford","Fiat","BMW","Mercedes"];</li>
+ <p>Array içindeki elemanları saymaya sıfırdan başlarız. Yani Ford dizinin ilk elemanı [1], son elemanı Mercedes  markası [3] indeks numarasına sahiptir.</p>
+
+ <h1>JavaScript Object (Nesne)</h1>
+ <p>JavaScript nesneleri süslü parantez {} ile oluşturulur.</p>
+
+    <p>Nesnenin özellikleri özellik:değer şeklinde virgül ile ayrılılarak yazılır.</p>
+    <li>var kisi = { ad:"Ali", soyad:"Veli", yas: 40};</li>
+    <p>Bu örnekte kisi adında bir nesne oluşturulmuştur. Bu nesnenin 3 özelliği vardır: ad , soyad , yas
+
+İlerleyen derslerde JavaScript nesneleri ile ilgili daha fazla bilgi verilecektir.</p>
+
+<h1>JavaScript typeof Operatörü</h1>
+<p>JavaScript typeof operatörü JavaScript değişkeninin veri türünü bulmak için kullanılır.
+
+typeof operatörü değişkenin türünü döndürür.</p>
+<li>typeof "ali veli"; // string döndürür</li>
+ <li>  typeof 123; // number döndürür</li>
+
+ <h1>İlkel Veri  (Primitive Data)</h1>
+ <p>Bir veri türü sadece tek bir değer saklıyor ve özellikleri yoksa ilkel veri  olarak adlandırılır.
+
+typeof operatörü aşağıdaki ilkel veri türlerini döndürür:</p>
+<li>string</li>
+ <li>  number </li>
+  <li>  boolean </li>
+   <li>  null   </li>
+       <li>   undefined</li>
+       <h1>Karmaşık Veri (Complex Data)</h1>
+       <p>JavaScript typeof operatörü  aşağıdaki iki karmaşık türü döndürür:</p>
+       <li>function</li>
+    <li>  object</li>
+    <p>örnek</p>
+   <li>typeof [1,2,3,4,5]; // object döndürür </li>
+     <li>   typeof {ad:'ali', yas:35}; //object döndürür </li>
+      <li>  typeof function fonksiyonum(){}; // function döndürür </li>

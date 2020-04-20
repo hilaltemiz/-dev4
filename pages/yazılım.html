@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="ödev.css">
+
+   <a href="yazılım.html" target=-blank></a>
+
+</head>
+<body bgcolor="#AAA7C1" style="color:white">
+  <div style="background-color:white; color:black; padding: 10px;">
+  <h1>JAVASCRİPT YAZILIMI</h1>
+<p>Javascript programı yazmak için ihtiyacınız olan alet-edavat, bu kitapçığın yanı sıra, iyi bir bilgisayar ve bir düz yazı programıdır. Bilgisayarınız ecza dolabı kılıklı bir PC ise Notepad, bilgisayarınız mandalina, çilek veya şeftali renkli bir iMac ise SimpleText bu iş için biçilmiş kaftan sayılır. Eğer bu amaçla bir kelime-işlem programı kullanacaksanız, oluşturacağınız metnin dosyasını diske veya diskete kaydederken, düz yazı biçiminde kaydetmesini sağlamalısınız. Çalışmaya başlamadan önce örnek kodlarınızı bir arada tutabilmek ve gerektiğinde gerçek sayfalarınızda yararlanabilmek için sabit diskinizde bir dizin açmanız yerinde olur.
+Javascript, HTML’in bir parçasıdır ve içinde bulunduğu HTML ile birlikte Web Browser programı tarafından yorumlanır. Dolayısıyla, Javascript programı yazmak demek, bir Web sayfası hazırlamak ve bu sayfadaki HTML kodlarının arasına Javascript kodları gömmek demektir.ilk Javascript programımızı yazalım. Şu kodu yazıp, merhaba1.htm adıyla kaydedin:
+</p>
+ <xmp>  <HTML>   </xmp>
+  <xmp>      <HEAD> </xmp>
+    <xmp>        <meta http-equiv="Content-Type" content="text/html; charset=windows-1254"> </xmp>
+    <xmp>       <TITLE>Merhaba Dünya!</TITLE>   </xmp>
+        <xmp>   </HEAD>   </xmp>
+        <xmp>      <BODY>  </xmp>
+        
+       <xmp>   <B>Merhaba Dünya</B><br>  </xmp>
+       <xmp>       <FORM> </xmp>
+      <xmp>      <BUTTON onclick="alert('Merhaba Dünya!')">TIKLAYINI!</BUTTON> </xmp>
+       <xmp>       </FORM> </xmp>
+
+        <xmp>       </BODY>> </xmp>
+
+        <p>Sonra ya bu dosyayı iki kere tıklayın; ya da favori Browser programınızı çalıştırın ve bu dosyayı açın. Karşınıza çıkacak düğmeyi tıklayın. İşte sonuç:JS001.TIF</p>
+        
+        <p>Birazcık yardımla da olsa, Javascript programcısı olarak dünyaya merhaba demiş bulunuyorsunuz. Yazdığınız koddan tek kelime bile anlamıyorsanız da hiç önemli değil. Önemli olan ilk adımı atmaktı.
+Bu adımı attığınıza göre şimdi yazdığınız kodu biraz irdeleyelim. Bütün Web sayfaları gibi, Javascript kodunuzun yer aldığı sayfa da tipik bir HTML kod kümesi:
+</p>
+<p>1. Browser programına kendisinin bir HTML dosyası olduğunu birinci satırda beyan ediyor; ve bittiği yer açıkça gösteriliyor.
+2. HTML kodu iki bölüm içeriyor: Başlık (Head) ve gövde (Body) bölümleri. Her bölümün nerede başladığı ve nerede bittiği açıkça belirtiliyor.
+3. Gövde bölümünde bir Form unsuruna yer veriliyor; fakat bu formun tek ögesi var: Düğme (Button).
+4. Daha önce Web sayfalarınıza düğme koyduysanız, bu düğmenin onlardan farklı bir tarafı var: Türü, değeri, vs. belirtilmiyor; sadece “onclick="alert('Merhaba Dünya!')" şeklinde bir ifadeye yer veriliyor.
+5. Ve ilk Javascript programınızda ne Javascript’in adı geçiyor; ne de HTML ile Javascript bölümlerini birbirinden ayırteden,<xmp>
+ <SCRIPT>..</SCRIPT> </xmp> etiketine yer veriliyor!
+Özellikle bu son husus, size şunu gösteriyor: Günümüzde Netscape ve IE Javascript ile o kadar içiçe geçmiş ve Javascript özellikle 1.2’nci sürümü ile o kadar Browserların Belge Nesnesi Modeli (Document Object Model) ile kaynaşmıştır ki, kimi zaman HTML’in işlevi nerede bitiyor, Javascript’in işlevi nerede başlıyor, kolaylıkla ayırt edilemez.
+Javascript’ten söz ederken, bu dilin imla kuralları olmakla birlikte bu kurallara yüzde 100 uymanın zorunlu olmadığını ifade ettik. Kural olarak, Javascript bölümü, HTML’in içine <xmp> <SCRIPT>..</SCRIPT> </xmp> etiketlerinin arasına gömülür. İşte size bütün kuralları yerine getirilmiş bir Javascript bölümü yazma örneği:</p>
+  <xmp>  <HTML> </xmp>
+  <xmp>   <HEAD>   </xmp>
+      <xmp>     <meta http-equiv="Content-Type" content="text/html; charset=windows-1254">  </xmp>
+ <xmp>    <TITLE>Merhaba Dünya!</TITLE>   </xmp>
+   <xmp>    <SCRIPT LANGUAGE=”Javascript1.2”>    </xmp>
+<!--Javascript kodunu eski sürüm Browserlardan gizleyelim
+function merhaba() //merhaba isimli fonksiyonu deklare ediyoruz
+  { //bu, fonksiyonun başlama işareti
+ <xmp> alert (“Merhaba Dünya!”)  </xmp> //fonksiyonun komutu ve komutun gerektirdiği metin
+  } //bu fonksiyonun bitme işareti
+// kod gizlemenin sonu -->
+  <xmp>  </HEAD>  </xmp>
+    <xmp>   <BODY>  </xmp>
+     <xmp>  <B>Merhaba Dünya</B><br>  </xmp>
+     <xmp>  <FORM> </xmp>
+     <xmp>     <BUTTON onclick=merhaba()>TIKLAYINI!</BUTTON> </xmp>
+    <xmp>  </FORM> </xmp>
+     <xmp>   </BODY> </xmp>
+      <xmp>   <HTML>  </xmp>
+    <p>Bu metni merhaba2.htm adıyla kaydeder ve Browser’ınızda açarsanız, görüntünün ve işlevin tıpatıp aynı olduğunu göreceksiniz. İki metin arasındaki fark, ikincisinin Javascript yazma kurallarına yüzde 100 uymasından ibaret. Bununla birlikte Javascript ile HTML’i birbirinden dikkatlice ayırmanız gereken durumlar, ikisinin birbiriyle kaynaştığı noktalardan daha çoktur. Hatta o kadar ki, Javascript’in ileri sürümüne ilişkin komutlar kullanıyorsanız, eski sürüm Browser’ların kafasının karışmaması ve dolayısıyla ziyaretçinizin bilgisayarının kilitlenmemesi için bunu bile belirtmeniz gereken durumlar olabilir. </p>
+
+
+
+
+

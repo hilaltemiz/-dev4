@@ -1,0 +1,73 @@
+<html>
+	<head>
+		<style type="text/css">	
+			body
+			{
+				background-color:white;
+				font-size: 80px;
+			}
+			#icerik
+{
+         float: right;
+          width: 900px;
+          
+
+}
+			.menu
+			{
+				list-style:none;
+				margin:"100"; padding:100;
+				font-weight: 100px;
+
+
+			}
+			.menu li
+			{
+				 width: 300px;
+                 max-width: 200px;
+                 display: block; 
+			color: black;
+			width: 250px;
+			background: #eee;
+			padding: 0px 20px 0px 20px; 
+			margin: 0 0 1px 0; 
+			font-weight: bold; 
+			text-decoration: none; 
+               
+    
+			}
+			.menu a
+			{
+				text-align:center;
+				background:black;
+				border-bottom:1px red solid;
+				border-left:1px white solid;
+				text-decoration:none;
+				color:white;
+				width:100;
+				display:block;
+			}
+			.menu a:hover
+			{
+				background: linear-gradient(black,red);
+				color:white;
+				border-bottom:1px solid red;
+				
+			}
+			 .marquee
+   {
+      clear: both;
+   }
+			
+		</style>
+	</head> 
+	<body>
+		<ul class="menu">
+			<li><a href="#">Anasayfa</a></li>
+			<li><a href="#">Albüm</a></li>
+			<li><a href="#">Referanslar</a></li>
+			<li><a href="#">İletişim</a></li>
+			<li><a href="#">Hakkında</a></li>
+		</ul>
+	</body>
+</html>

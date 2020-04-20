@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="ödev.css">
+
+   <a href="Diziler.html" target=-blank></a>
+</head>
+<body bgcolor="#AAA7C1" style="color:white">
+   <div style="background-color:white; color:black; padding: 10px;">
+		<h1>JavaScript'te Diziler (Array)</h1>
+		<p>Değişkenler ve Veri Türleri dersinde diziler (array) konusuna kısaca değinmiştik. Birden fazla verinin saklanması için oluşturulan değişkenlere dizi adı verilir. Dizilerin oluşturulmasındaki temel düşünce birden fazla veriye tek bir değişken altından erişebilmektir.</p>
+
+       <p>  Değişkenlerdeki her bir veriye eleman denir. Dizi elemanları indeks değerleri ile çağrılırlar. İndeks bir elemanın dizi içinde nerede yer aldığını gösterir.</p>
+
+       <p>  İndeksler bir çok programlama dilinde olduğu gibi 0'dan başlar. 0'dan başlamasının sebebi programlama dillerinin tamamen insan mantığı oluşturulmuş olduğunun göstergesidir.</p>
+
+          <p>   Dizide eleman tanımlamak için kullanılan üç yöntem vardır. İlkini sözünü ettiğim derste görmüştük.</p>
+
+<p> var sayilar = new Array("sıfır", "bir", "iki", "üç");</p>
+  <p>  document.write(sayilar);</p>
+   
+   <p>Bu daha önce öğrendiğimiz yöntemdir. sayilar adında 4 elemanlı bir dizi oluşturduk.</p>
+   <li>sıfır,bir,iki,üç</li>
+   <p>Çıktımız ise bu şekilde olacaktır.</p>
+    <li> var sayilar = ["sıfır", "bir", "iki", "üç"]; </li>
+  <li>  document.write(sayilar); </li>
+
+  <p>Bu da ikinci yöntemdir. Dizi elemanlarını köşeli parantezler ([ ]) içerisine yazıyoruz.</p>
+  <li>sıfır,bir,iki,üç</li>,
+  <p>Çıktımız ise aynı şekilde olacaktır.</p>
+  <li> var sayilar = new Array();</li>
+   <li> sayilar[0] = "sıfır";</li>
+     <li> sayilar[1] = "bir";</li>
+     <li> sayilar[2] = "iki";</li>
+     <li>  sayilar[3] = "üç";</li>
+      <li> document.write(sayilar);</li>
+
+
+      <p>Son yöntemimizde ise sayilar adında boş bir dizi oluşturduk ve elemanlarını tek tek girdik.</p>
+      <p>sıfır,bir,iki,üç</p>
+      <p>Bu çıktımız da aynı olacaktır.</p>
+      <p>length özelliği: Bir dizinin eleman sayısını dilimizde uzunluk anlamına gelen length özelliği ile sorgulayabiliriz.</p>
+      <li>var sayilar = ["sıfır", "bir", "iki", "üç"];</li>
+   <li> document.write(sayilar.length);</li>
+   <p>Bunun için dizi adindan sonra .length komutunu çalıştırmamız yeterlidir.</p>
+   <p>4</p>
+   <p>Çıktımız ise bu şekilde olacaktır.</p>
+   <li>
+    var sayilar = ["sıfır", "bir", "iki", "üç"];</li>
+  <li> document.write(sayilar[2]); </li>
+<p>İstenilen eleman değerine ulaşmak için indeks değerini sorgulamak yeterlidir.</p>
+<p>iki</p>
+<p>Çıktımız ise ikinci indeks değerini verecektir.</p>
+<h1>Dizi Elemanlarını Değiştirme</h1>
+<p>JavaScript'te dizi elemanları oldukça kolay bir şekilde değiştirilebililr.</p>
+<li>var sayilar = ["sıfır", "bir", "iki", "üç"];</li>
+ <li>   sayilar[2] = "iikii"; </li>
+  <li>  document.write(sayilar);</li>
+  <p>Örneğin sayilar dizisindeki "iki" elemanını "iikii" olarak değiştirdik. Bunun için değiştirmek istediğimiz elemanın indeks değerini yazdıktan sonra yeni değeri atamamız yeterlidir.</p>
+  <h1>Diziye Yeni Eleman Ekleme</h1>
+  <p>JavaScript'te diziye yeni eleman eklemek de oldukça kolaydır.
+
+push( ) metodu: push dilimizde ittirmek anlamına gelmektedir. JavaScript'te dizinin sonuna eleman eklemek için kullanılır.</p>
+<li>var sayilar = ["sıfır", "bir", "iki", "üç"];</li>
+    <li>  sayilar.push("dört", "beş");</li>
+<li>    document.write(sayilar);</li>
+<p>Bu şekilde iki yeni eleman daha eklemiş olduk.</p>
+<p>sıfır,bir,iki,üç,dört,beş</p>
+<p>Çıktımız ise bu şekilde oldu.
+
+unshift( ) metodu: Bu method JavaScript'te dizinin başına eleman eklemek için kullanılır.</p>
+<li> var sayilar = ["sıfır", "bir", "iki", "üç"];</li>
+  <li>  sayilar.unshift("eksi üç", "eksi iki", "eksi bir");</li>
+ <li>   document.write(sayilar);</li>
+
+ <p>Negatif ifadeli sayılarımızı dizinin başına ekledik.</p>
+ <p>eksi üç,eksi iki,eksi bir,sıfır,bir,iki,üç</p>
+ <p>Çıktımız ise bu şekilde olacaktır</p>
+ <h1>Diziden Eleman Silme</h1>
+ <p>splice( ) metodu: splice dilimizde iki ucu birbirine birleştirmek gibi bir anlama gelmektedir. JavaScript'te ise belirtilen index değerinden sonra silinecek eleman ya da elemanlar için kullanılır. splice metodunda replace'de olduğu iki parametre vardır. İlk parametre silinecek indeks konumunu, ikinci parametre ise indeksten sonra kaç adet elemanın silineceğini belirtir.</p>
+ <li> var sayilar = ["sıfır", "bir", "iki", "üç"]; </li>
+  <li> sayilar.unshift("eksi üç", "eksi iki", "eksi bir"); </li>
+  <li>  sayilar.splice(0, 3); </li>
+  <li>  document.write(sayilar);</li>
+  <p>Biraz karışık gibi gelmiş olabilir. Burada şunu yaptık: Negatif değerli sayıları ekledik ve daha sonra bu sayıları diziden çıkardık.</p>
+  <p>sıfır,bir,iki,üç</p>
+  <p>Çıktımız ise bu şekilde olacaktır.</p>
+  <p>pop( ) ve shift( ) metodları: pop metodu dizinin son elemanını, shift metodu ise dizinin ilk elemanını silmeye yarar.</p>
+ <li> var sayilar = ["sıfır", "bir", "iki", "üç"];</li>
+ <li>   sayilar.pop();</li>
+<li>   sayilar.shift();</li>
+  <li>  document.write(sayilar);</li>
+  <p>sayilar dizimizin ilk ve son elemanları olan sıfır ve üç elemanlarını sildik.</p>
+  <p>bir,iki</p>
+  <p>Çıktımız bu şekilde olacaktır.</p>
+  <p>delete operatörü: Bu operatör ilgili elemanı listeden çıkartır ve yerine tanımsız bir eleman atar. Diğer bir ifade ile ilgili indekse ait elemanı tanımsız yapar.</p>
+  <li>  var sayilar = ["sıfır", "bir", "iki", "üç"];</li>
+ <li>   delete sayilar[1];</li>
+ <li>   document.write(sayilar+"<br>"+sayilar.length);e(sayilar+"<br>"+sayilar.length);</li>
+ <p>1 numaralı indeksi sildik. Fakat kaldırmadık. Yerine tanımsız bir değişken atandı. Bir alt satırdaki dizi boyutundan bunu anlayabilirsiniz.</p>
+ <p>sıfır,,iki,üç
+4</p>
+<p>Çıktımız ise bu şekilde olacaktır.</p>
+<h1>Diziden Eşzamanlı olarak Eleman Silme ve Ekleme</h1>
+<p>Yine splice( ) fonksiyonunu kullanıyoruz. Fakat bu sefer iki parametreden sonra sildiğimiz elemanların yerine gelecek elemanları yazıyoruz. splice( )'ı tam olarak anladıysanız bu işlem oldukça kolay gelecektir.</p>
+<li> var sayilar = ["sıfır", "bir", "iki", "üç"];</li>
+ <li>   sayilar.unshift("eksi üç", "eksi iki", "eksi bir");</li>
+ <li>   sayilar.splice(0, 3, "zinzin", "zomzom", "zumzum");</li>
+<li>    document.write(sayilar);</li>
+<p>Bu sefer negatif ifadeleri sayıları sildik ve yerine "zinzin", "zomzom", "zumzum" değerlerini yazdırdık.</p>
+<p>zinzin,zomzom,zumzum,sıfır,bir,iki,üç</p>
+<p>Çıktımız ise bu şekilde olacaktır.</p>
+<h1>Dizilerin Birleştirilmesi</h1>
+<p>concat( ) metodu: Birden fazla diziyi birleştirmek için kullanılır.</p>
+
+<li>var sayilar = ["sıfır", "bir", "iki", "üç"];</li>
+ <li>  var cinler = ["zinzin", "zomzom", "zepzep"];</li>
+ <li> var sayilar_ve_cinler = sayilar.concat(cinler);</li>
+<li>  document.write(sayilar_ve_cinler);</li>
+<p>Burada sayilar ve cinler adında iki dizimiz var. sayilar_ve_cinler adında yeni bir dizi tanımlıyoruz ve iki dizimizi birleştiriyoruz.</p>
+<p>sıfır,bir,iki,üç,zinzin,zomzom,zepzep</p>
+<p>Çıktımız ise bu şekilde olacaktır.</p>
+<h1>Elemanların Sıralanması</h1>
+<p>sort( ) metodu: Dizi elemanlarını küçükten büyüğe göre sıralamak için kullanılır.</p>
+<li> var sayilar = ["sıfır", "bir", "iki", "üç"];</li>
+ <li> document.write(sayilar.sort());</li>
+<p>Örneğimizde sort( ) metodu ile elemanlarımızı alfabetik sıraya göre sıraladık. Önemle belirteyim ki, elemanların indeks konumları da değişecektir.</p>
+<p>bir,iki,sıfır,üç</p>
+<p>Çıktımız ise bu şekilde olacaktır.</p>
+<p>reverse( ) metodu: Dizi elemanlarını tersten sıralamak için kullanılır.</p>
+<li> var sayilar = ["sıfır", "bir", "iki", "üç"];</li>
+<li>    document.write(sayilar.reverse());</li>
+<p>Örneğimizde reverse( ) metodu ile elemanlarımızı tersten sıraladık.</p>
+<p>üç,iki,bir,sıfır</p>
+<p>Çıktımız ise bu şekilde olacaktır.</p>
+<h1>Dizide Değişken Aramak</h1>
+<p>indexof( ) metodu: Diyelim ki bir dizide çok fazla elemanımız var bir elemanı arıyoruz; fakat nerede olduğunu bulamıyoruz. Bunun için indexof( ) fonsiyonunu kullanıyoruz. Bu metod aranan elemanın indeks konumunu verir.</p>
+<li>   var sayilar = ["sıfır", "bir", "iki", "üç"];</li>
+ <li>  document.write(sayilar.indexOf("iki"));</li>
+<p>Örneğimizde "iki" adlı elemanın nerede olduğunu sorgulattık.</p>
+<p>2</p>
+<p>Çıktımız ise bu şekilde indeks numarasını verecektir.</p>
+<h1>Elemanların Dönüşümü ve Metinsel İşlemler</h1>
+<p>Dönüşümü öğrenmeden önce bir dizi içerisindeki elemanların hangi veri türü olduğunu öğrenelim.
+
+typeof ( ) metodu: Bu metod bir değişkenin ne tür bir veri türü olduğu hakkında bilgi verir.</p>
+<li>  var sayilar = ["sıfır", "bir", "iki", "üç", 1, 2, 3];</li>
+ <li>   document.write(typeof(sayilar[4]));</li>
+ <p>Örneğimizde indeks değeri 4 olan "1" adlı elemanın ne tür bir veri olduğunu sorguladık</p>
+ <p>number</p>
+ <p>"1" elemanının number veri türünde olduğunu öğrendik.</p>
+ <p>toString( ) metodu: Dizi içindeki tüm elemanları string veri türüne çevirir.</p>
+ <li>  var sayilar = ["sıfır", "bir", "iki", "üç", 1, 2, 3];</li>
+ <li>   var sayilar = sayilar.toString();</li>
+ <li>6   document.write(typeof (sayilar[4]));</li>
+ <p>Burada sayilar dizisindeki tüm elemanları string türüne çevirdik (convert ettik).</p>
+ <p>string</p>
+ <p>Dördüncü eleman olan "1"in ne tür olduğunu sorduğumuzda ise string yanıtını aldık.</p>
+ <p>join( ) metodu: Normalde çıktımızı yazdırırken elemanlar arasına varsayılan olarak virgül konulur. join ile dizi içindeki elemanların sıralama görünümünü değiştirebiliriz.</p>
+ <li> var sayilar = ["sıfır", "bir", "iki", "üç"];</li>
+   <li> document.write(sayilar.join("-"));</li>
+   <p>Elemanlar arasına - (tire) işaretinin konulmasını istedim.</p>
+   <p>sıfır-bir-iki-üç</p>
+   <p>Çıktımız ise bu şekilde olacaktır.</p>

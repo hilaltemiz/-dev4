@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+  	.kirmizi{
+  		color:red;
+  		background-color: yellow;	
+  	}
+  </style>
+  <script>
+		function link(){
+			var elementler = document.getElementsByTagName("h3");
+
+			var i = 0;
+			for (; i<elementler.length; i++) {
+				var ozellik = document.createAttribute("class");
+				ozellik.value = "kirmizi";
+
+				elementler[i].setAttributeNode(ozellik);
+				
+			}
+			 var hrefozelligi =document.createAttribute("href");
+			hrefozelligi.value="https://www.google.com";
+			document.getElementById("aetiketi").setAttributeNode(hrefozelligi);
+			 }
+
+
+
+
+  	function kısım() {
+  		var metin =document.getElementById("textarea").value;
+
+  		var yenielement =document.createElement("p");
+
+  		var icerik = document.createTextNode(metin);
+
+  		yenielement.appendChild(icerik);
+
+
+  		var anakısım = document.getElementById("anakısım");
+
+  		anakısım.appendChild(yenielement);
+
+  	}
+  	function sil(){
+  		var elementler = document.getElementsByTagName("p");
+
+  		if(elementler.length != 0){
+  			var element = elementler[elementler.length-1];
+
+  			var anne =element.parentNode;
+
+  			anne.removeChild(element);
+  		}
+  	}
+  	
+  </script>
+</head>
+<body bgcolor="#AAA7C1" style="color:white">
+	<div style="background-color:white; color:black; padding: 10px;">
+	<div id="anakısım" style="background-color:#eeeee ">
+	<h3>Laptop Hakkında</h3>
+<p>Her zaman için önce yapılacak olan Laptop’un arkasındaki vidaları çıkarmaktır. Tamamını çıkartın, önce ufak bir kapak geliyor olabilir, oradaki (Varsa) HDD ve RAM gibi elemanları çıkartın. Yine tüm vidaları çıkardıktan sonra disk sürücüyü çıkarmayı unutmayın. Daha sonra Laptop’u düz hale getirin ve ince bir metalle, zarar vermeyecek şekilde alt kasaya bağlı olan üst plastiği yavaş yavaş sökün. Rahatça sökülecektir, gelecek olan klavye ve fare bağlantılarını (Konnektör) ayırmayı unutmayın. Bunların nereye takılı olduğunu not edin, mümkünse bir defter kullanın, zira sandığınızdan çok bağlantı olacak.</p>
+<h3>Devamı...</h3>
+<p>Anakarta ulaştıktan sonra monitörün güç bağlantısını, monitöre görüntü gönderen devreye bağlı konnektörleri (Biri siyah ve biri beyaz olabilir, yerlerini not edin), kaç tane varsa her bir fanın bağlantılarını ve temel güç bağlantısını ayırın. Temel güç bağlantısı direkt klavye üzerindeyse onu önceden çıkarın. Yapmanız gereken en önemli şey not almaktır, zira tecrübesiz biri direkt olarak her bağlantıyı hatırlamakta güçlük çekebilir. Ayırıp, işinizi gördükten sonra (Onboard olmayan işlemciyi değiştirmek gibi) aynı şekilde notunuza uyarak geri toplayabilirsiniz.</p>
+<a id="aetiketi">Buraya Tıklayın</a>
+</div>
+
+<div>
+	<textarea id="textarea" rows="10" cols="30"></textarea>
+
+
+	<button onclick="kısım()">Ekle</button>
+	<button  onclick="sil()">Sil</button>
+	<button  onclick="link()">Değiştirme</button>
+
+
+</div>
+
+</body>
+</html>

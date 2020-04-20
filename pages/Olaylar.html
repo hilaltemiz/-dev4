@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="ödev.css">
+
+   <a href="Operatörler.html" target=-blank></a>
+</head>
+<body bgcolor="#AAA7C1" style="color:white">
+   <div style="background-color:white; color:black; padding: 10px;">
+	<h1>JavaScript Olaylar</h1>
+	<p>JavaScript nesne tabanlı (object-oriented) bir dildir. Nesne tabanlı olmasından dolayı olay yönelimli çalışır.</p>
+	 <p> Örneğin; bir button'a tıkladıktan sonra çıkan uyarı penceresi JavaScript'in nesne tabanlı bir dil olduğunun açık bir göstergesidir.</p>
+
+    <p>  JavaScript'te bazı olayların gerçekleştirilmesi için geliştirilmiş ve web sitelerinde senelerdir başarı ile kullanılan hazır olaylar vardır. Şimdi bu olayları öğrenmeye başlayalım.</p>
+    <h1>onload Olayı</h1>
+    <p>Daima <body> etiketi ile kullanılır. Sayfa yüklendikten sonra gerçekleşecek olayları yerine getirir.</p>
+    	<p>hosGeldiniz( ) isimli bir fonksiyon tanımladım ve bu fonksiyonumu onload olayı ile body etiketi içerisinde kullandım. Sayfam yüklendikten sonra "Sayfamıza hoş geldiniz!" bildirimi yayınlanacaktır. onload olayı bu şekilde çalışmaktadır.</p>
+    	<h1>onclick Olayı</h1>
+    	<p>En çok kullanılan olaydır. Bir nesneye tıklandığında çalışacak kodları yerine getirir.</p>
+    	<p>Şeklinde kodlarımız olsun. HTML5 derslerinde kullandığımız örnek bir form. İlk olarak onayla( ) ve temizle( ) isimli iki fonksiyon tanımladım. Bunları "Onayla" ve "Form Temizle" düğmelerinde kullandım.</p>
+    	<p>Burada dikkatimizi çeken temizle( ) fonksiyonundaki confirm( ) fonksiyonu ve return deyimi olmalı. </p>
+    <p>	 confirm dilimizde onayla anlamına gelmektedir. </p>
+  <p>  "Ok" ve "Cancel" seçimlerinin olduğu bir uyarı penceresi açar.</p>
+   <p> Fonksiyonda ve onclick olayında return kullanmamızın sebebi kullanıcı iptal'e tıkladığında reset'leme işlevinin yerine getirilmemesini sağlamak için.</p>
+   <h1>onfocus ve onblur Olayları</h1>
+   <p>onfocus nesne seçildiğinde meydana gelecek olayları, onblur ise seçimden çıkıldığında gerçekleşecek olayları belirtir. CSS'teki :focus sözde sınıfı ile aynı işlevi gördüğü için kullanımı gereksizdir. Bu yüzden bu olayı örneklendirmiyorum. Yine de bilmenizde fayda var.</p>
+   <h1>onerror Olayı</h1>
+   <p>Tarayıcı nesneyi sayfa yükledikten sonra meydana gelecek olayları gerçekleştirir.</p>
+   <p>hata( ) isimli bir fonksiyonumuz olsun ve hata uyarısını versin. cicek.png dosyasımız sayfada yüklenemediği zaman bir uyarı penceresi açılacak.</p>
+   
+   <h1>onmousedown, onmousemove, onmouseout, onmouseover ve onmouseup Olayları
+</h1>
+<p>Fare imleci ile bir nesnenin üzerine gelindiğinde gerçekleşecek olayları sağlarlar.</p> 
+   <p>  onmousedown fare ile bir tuşa basıldığında, onmousemove nesnenin üzerinde gezildiğinde, onmouseout nesnenin üzerinden gidildiğinde, onmouseover nesnenin üzerine gelindiğinde, onmouseup ise tuşa basmaktan vazgeçildiğinde gerçekleşecek olayları yerine getirir.</p>
+   <p> Tüm bu olaylar CSS'teki :active, :hover, :focus gibi sözde sınıflar ile aynı işlevleri yerine getirdikleri için artık kullanılmamaktadırlar. Bu yüzden anlatma gereği duymuyorum.</p>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="ödev.css">
+
+   <a href="Döngüler.html" target=-blank></a>
+</head>
+<body bgcolor="#AAA7C1" style="color:white">
+   <div style="background-color:white; color:black; padding: 10px;">
+	<h1>Döngüler</h1>
+<p>Programlamanın olmazsa olmazlarıdır. Bir komut bloğunu birden çok kez çalıştırmak için kullanılırlar.</p> 
+<p>   Örneğin; ekranımıza 1'den 100'e kadar sayı yazdırmak istiyoruz. Bunun için yüz kere document.write(n) ifadesini yazmayız. Burada devreye döngüler girer</p>
+<h1>for Döngüsü</h1>
+<p>En çok kullanılan döngüdür. Bir değişken için tanımladığımız koşul içindeki komutlar döngü tamamlanıncaya kadar çalışır.</p>
+<li>for (koşul başlangıç değeri; koşul; arttırma/azaltma) { </li>
+<li>   // Çalışacak komutlar </li>
+ <li> }</li>
+ <p>Şeklinde algoritması vardır. Şimdi bu algoritmanın nasıl çalıştığını bir örnek ile özetleyelim.</p>
+ <li>var kullaniciSayisi = prompt("1'den 100'e kadar bir sayı giriniz. Ben bu sayıyı 100'e kadar yazdıracağım.", ""); </li>
+ <li>   for (var i = kullaniciSayisi; i < 100; i++) { </li>
+ <li>       document.write(i + "<br>"); </li>
+ <li>   }</li>
+ <p>Şeklinde bir döngümüz olsun. Kullanıcı sayısını i değişkenine atadık. i ise 100'e kadar birer birer artacak. Yazdırırken ise <br/> etiketi ile bunu alt alta yazdıracağız.</p>
+ <p>Kodlarımı çalıştırdım ve örnek olarak "89" sayısını girdim.</p>
+ <li>89</li>
+   <li>  90 </li>  
+ <li>    91 </li>
+ <li>   92 </li>
+   <li>  93 </li>
+       <li>  94</li>
+      <li>  95</li>
+     <li> 96</li>
+      <li> 97</li>
+       <li>  98</li>
+  <li> 99</li>
+  <p>Ekran çıktım ise bu şekilde olacaktır. Eğer benim gibi zibidilik yapmak istiyorsanız girilen değere "-999999" gibi sayılar verebilirsiniz. İşlemcinizin pasını atarsınız.</p>
+  <h1>while Döngüsü</h1>
+  <p>for döngüsü ile aynı işlemleri yapar. Birkaç küçük sözdizimi farkı vardır. Değişken döngüden önce tanımlanır. Parantez içerisine sadece koşul yazılır ve arttırma/azaltma işlemleri yazdırma işleminden sonra yapılır.</p>
+  <li>koşul başlangıç değeri; </li>
+  <li>  while (koşul) { </li>
+   <li>  // Çalışacak komutlar </li>
+    <li>   arttırma/azaltma </li>
+       <li> }</li>
+       <p>Şeklinde bir algoritması vardır. Şimdi aynı örneğimizi while döngüsü ile yapalım.</p>
+       <li>  var kullaniciSayisi = prompt("1'den 100'e kadar bir sayı giriniz. Ben bu sayıyı 100'e kadar yazdıracağım.", ""); </li>
+  <li>  var i = kullaniciSayisi; </li>
+  <li>  while (i < 100) { </li>
+    <li>    document.write(i + "<br>"); </li>
+  <li>      i++; </li>
+ <li>   }</li>
+ <p>Bu sefer kullanıcı sayısını "i" değişkenime aktardım. Daha sonra döngümü yazdım. Dikkat ederseniz arttırma işlemini yazdırdıktan sonra yapıyorum.</p>
+ <p>Test amacıyla "92" değerini girdim.</p>
+ <li>92</li>
+ <li>93</li>
+<li>94</li>
+<li>95</li>
+<li>96</li>
+<li>97</li>
+<li>98</li>
+<li>99</li>
+<p>Ekran çıktım bu şekilde olacaktır.</p>
+<h1>do ... while Döngüsü</h1>
+<p>while döngüsüne çok benzer. Tek farkı koşul doğru olsun ya da olmasın döngü içersindeki komutların en az bir defa çalıştırılmasıdır.</p>
+<li>koşul başlangıç değeri; </li>
+  <li>  do { </li>
+  <li> // Çalışacak komutlar </li>
+  <li> arttırma/azaltma </li>
+   <li> } while (koşul)</li>
+   <p>Şeklinde bir söz dizimi vardır. Şimdi aynı örneğimizi do ... while ile yapalım.</p>
+   <li> var kullaniciSayisi = prompt("1'den 100'e kadar bir sayı giriniz. Ben bu sayıyı 100'e kadar yazdıracağım.", ""); </li>
+    <li> var i = kullaniciSayisi; </li>
+  <li>   do { </li>
+   <li>     document.write(i + "<br>"); </li>
+   <li>     i++; </li>
+ <li>   } while (i < 100);</li>
+ <p>Kodlarımı çalıştırıyorum. Bu sefer "94" değerini girdim.</p>
+ <li>94 </li>
+    <li>95</li>
+    <li>96</li>
+<li>97</li>
+<li>98</li>
+<li>99</li>
+<p>Çıktımız ise bu şekilde olacaktır.</p>
+<h1>Döngü Deyimleri</h1>
+<p>Döngüden çıkmak ya da döngü başına gitmek için kullanılan deyimlerdir.</p>
+<h1>break Deyimi</h1>
+<p>Döngüyü durdurmaya, terk etmeye yarar. switch döngüsünde bunun nasıl kullanılacağını görmüştük. if else, else if koşullarında da kullanılabilir.</p>
+<h1>continue Deyimi</h1>
+<p>Bir döngü içerisinde çalıştırılmasını istemediğimiz yerlerde kullanırız. Bunu şöyle göstereyim:</p>
+<li>var kullaniciSayisi = prompt("1'den 100'e kadar bir sayı giriniz. Ben bu sayıyı 100'e kadar yazdıracağım.", ""); </li>
+ <li>   for (var i = kullaniciSayisi; i < 100; i++) { </li>
+ <li>       if (i >= 80 && i < 90) { </li>
+  <li>          continue; </li>
+ <li>       } </li>
+   <li>     document.write(i + "<br>"); </li>
+     <li>  }</li>
+     <p>Bu kodlarda 80 ve 90 arasındaki sayılar yazdırılmayacaktır. Örnek olarak "75" sayısını girdim.</p>
+     <li>75</li>
+     <li>76</li>
+     <li>77</li>
+     <li>78</li>
+     <li>79</li>
+     <li>90</li>
+     <li>91</li>
+     <li>92</li>
+     <li>93</li>
+     <li>94</li>
+     <li>95</li>
+     <li>96</li>
+     <li>97</li>
+     <li>98</li>
+     <li>99</li>
+     <p>Çıktımız ise bu şekilde olacaktır.</p>

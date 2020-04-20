@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="ödev.css">
+
+   <title>JavaScript Fonksiyon Kullanımı</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <h1>Fonksiyon Kullanımı</h1>
+  <p>Javascript kodu yazan bir çok developer this anahtar kelimesini kullanmıştır. Fakat C# gibi nesne tabanlı yazılım geliştiricilerin çoğu this anahtar kelimesini kullanırken kafasının karıştığını biliyorum. Aslında javascript teki this ile normal nesneye yönelimli programlamadaki this aynı değildir. Javascript nesnye yönelimli programlamaya karşılık fonksiyon tabanlı bir dildir. Fonksiyon çağırmalarında this anahtar kelimesi önemli bir rol oynar.</p>
+  <xmp> var result = { </xmp>
+  <xmp>    log:function(text){ </xmp>
+  <xmp>  document.getElementById('result-log').innerHTML = text; </xmp>
+  <xmp>      }  </xmp>
+  <xmp>       }; </xmp>
+  <xmp>      function sum(a,b) </xmp>
+  <xmp>          {  </xmp>
+  <xmp>          return a + b; </xmp>
+   <xmp>      }  </xmp>
+
+   <xmp>      result.log(sum(2,3)); </xmp>
+   <p>Yukarıda standart bir fonksiyon tanımladık. Bu fonksiyon ancak çağırıldığı(invoke) zaman yürütülür. sum(2,3) metodunu çağırdıktan sonra sonuç ekranında 5 yazdığını göreceksiniz. Peki bu fonksiyon herhangi bir nesneye acaba bağlandı mı? Javascript daima varsayılan olarak global bir nesneye sahiptir. Bu global nesne browser için window nesnesidir. Aslında yukarıda ki fonksiyon window global nesnesine bağlanmış oldu. Yani aşağıda görüldüğü gibi bu fonksiyonu window.sum(2, 3) olarak da çağırabiliriz.</p>
+  <xmp> function sum(a,b) </xmp>
+  <xmp>      {  </xmp>
+  <xmp>       return a + b; </xmp>
+  <xmp>           }  </xmp>
+ <xmp>       console.log(window.sum(2, 3)); // geriye 5 döndürecek. </xmp>
+ <p>İşte this anahtar kelimesinin sihri buradadır. Eğer bir fonksiyon çağrıldığı zaman kendi içinde(scope) hangi nesneye bağlanıyorsa o nesne this anahtar kelimesini işaret eder.</p>
+ <xmp>function newFunction() { </xmp>
+ <xmp>      return this;    </xmp>
+ <xmp>          }      </xmp> 
+<xmp>          console.log(newFunction()); // geriye window nesnesini geriye döndürür. </xmp>
+<p>Yine başka bir örnek verelim. global bir değişken tanımlayalım.</p>
+<xmp>var isGlobalWorld = true; </xmp>
+<xmp>     function doCar() {   </xmp>
+<xmp>  var isGlobalWorld = false; //başına var koyarak isGlobalWorld nesnesi local hale getirildi. </xmp>
+<xmp>  console.log(isGlobalWorld); //Geriye false döndürür. çünkü isGlobal değişkeni fonksiyon içinde local olarak tanımlandığı için. </xmp>
+ <xmp> console.log(this.isGlobalWorld); //Geriye true döndürür. çünkü this anahtar kelimesi window nesnesini işaret eder. isGlobal değişkeni global tanımlandığı için(yani fonksiyon dışındaki isGlobal değişkeni) window nesnesine bağlanır. </xmp>
+ <xmp> console.log(window.isGlobalWorld); </xmp>
+ <xmp>      } </xmp>
+       window.doCar();

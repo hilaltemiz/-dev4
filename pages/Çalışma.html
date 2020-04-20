@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="ödev.css">
+
+   <a href="Çalışma.html" target=-blank></a>
+</head>
+<body bgcolor="#AAA7C1" style="color:white">
+   <div style="background-color:white; color:black; padding: 10px;">
+<h1>JavaScript Çalışma Prensibi</h1>
+<p>Javascript kodlama da kodlama yoğunluğu genelde fazladır. Kodlar genelde üstten alta doğru sıralanarak yazılır ve sunucu da tarayıcı da kodları bu şekilde sıraya dizerek yorumlar.</p>
+<li>  var x,y, z; </li>
+
+<li>  x = 10; </li>
+
+<li>  y = 20; </li>
+
+<li>  z = x + y; </li>
+
+<li>  document.write(z);</li>
+<p>Yukarıda verilen örnekte x, y,  değişkenleri tanımlanarak bu değişkenlere sayısal değerler atanarak z değişkeninde bu iki değer toplanmış ve ekrana “document write()” komutu ile yazdırılmıştır.</p>
+<h1>Javascript İle Kodları birbirinden ne ile ayırırız?</h1>
+<p>Tüm programlama dillerinde olduğu gibi kod bloklarının birbirleri ile çakışmasını önlemek için belirli ayraçlar kullanılır. Javascriptte de kod parçacığını bir diğerinden ayırmak ve hataya mahal vermemek için noktalı virgül kullanılır (;).</p>
+<li>  var x,y, z; </li>
+
+  <li> x = 10; </li>
+
+   <li> y = 20; </li>
+
+ <li>  z = x + y; </li>
+
+<li>  document.write(z);</li>
+<p>Yukarıdaki örnekte olduğu gibi, var ile x, y, z değişkenleri tanımlanmış ve buraya kadar olan kısmın ayrı yorumlanması için noktalı virgül ile bitirilmiş. Devamındaki değişkenler de değer aldıktan sonra noktalı virgül ile bitirilmişler ve document.write komutu da aynı şekilde işlevini tamamlayabilmek için noktalı virgül ile kapatılmış.</p>
+<h1>Javascriptte boşluk kullanımı</h1>
+<p>Javascript kodladığınızda bırakacağınız boşlukların bir önemi yoktur.</p>
+<p>meslek  =  "manav kamil";</p>
+<p>meslek = "manav kamil";</p>
+<p>yukarıdaki örneği incelediğinizde ilk meslek değişkeninden sonra  boşluk eşittir işareti ve boşluk değişken tanımı var. Aşağıdaki örnekte o boşluklar yok. İki örnekte düzgün çalışacaktır.</p>
+<h1>Javascript Kod Uzunluğu</h1>
+<p>Javascript kodlarının uzun olması okumayı ve anlamayı zorlaştıracaktır bu yüzden, satırlara ayırarak yazmak her zaman daha kullanışlıdır.</p>
+<li> <div id=”manav”></div </li>
+
+  <li>   document.getElementById("manav ").innerHTML =
+
+ "Merhaba JavaScript";</li>

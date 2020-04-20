@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="ödev.css">
+
+   <a href="Alışveriş.html" target=-blank></a>
+
+<script type="text/javascript">
+function addOpt()
+{
+ var opt = document.createElement("option");
+ document.getElementById("konular").options.add(opt);
+ opt.text = document.getElementById('yeniDeger').value;
+ opt.value = document.getElementById('yeniDeger').value;
+}
+function removeOpt()
+{
+ var silSelect=document.getElementById("konular");
+ silSelect.remove(silSelect.selectedIndex);
+}
+function optNumber()
+{
+ alert(document.getElementById("konular").options.length);
+}
+</script>
+
+</head>
+<body bgcolor="#AAA7C1" style="color:white">
+	<div style="background-color:white; color:black; padding: 10px;">
+	<table>
+<tr><td>Ürün Girin:</td><td><input type="text" id="yeniDeger" /></td>
+ <td>
+  <select id="konular">
+   
+  </select>
+ </td><td> </td>
+</tr>
+<tr><td><input type="button" value="Ekle" onclick="addOpt();" /></td>
+<td><input type="button" value="Kaldır" onclick="removeOpt();" /></td>
+<td><input type="button" value="Ürün Sayısı" onclick="optNumber();" /></td>
+</tr>
+</table>
+</body>
